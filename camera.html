@@ -2,8 +2,20 @@
 <html>
 
 <head>
-    <title>PoseNet - Camera Feed Demo</title>
+    <title>Bodmo</title>
     <style>
+    
+    body {
+    background-color: #18D1F1;
+    color: white;
+Font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 24px; font-style: normal; ; font-variant: normal; font-weight: bold; line-height: 26px; }
+    }
+    
+    #content {
+    	max-width: 800px; 
+   		margin: auto;
+    }
+    
     .footer {
         position: fixed;
         left: 0;
@@ -22,12 +34,21 @@
       .footer-text, .dg {
         display: none;
       }
+      
+      #logo {
+      	background-image: url("https://www.dropbox.com/sh/3yzvtvq1va303hi/AADSPJDcbhSn1quJc5VMn73pa?dl=0");
+      	
+      }
+      
     }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
+<div id="content">
+<div id="logo">
+</div>
     <div id="info" style='display:none'>
     </div>
     <div id="loading">
@@ -42,14 +63,13 @@
         display: none;
         ">
         </video>
+        
+        
         <canvas id="output" />
     </canvas></div>
     <div class="footer">
         <div class="footer-text">
             <p>
-                PoseNet runs with either a <strong>single-pose</strong> or <strong>multi-pose</strong> detection algorithm. The single person pose detector is faster and more accurate but requires only one subject present in the image.
-                <br>
-                <br> The <strong>output stride</strong> and <strong>image scale factor</strong> have the largest effects on accuracy/speed. A <i>higher</i> output stride results in lower accuracy but higher speed. A <i>higher</i> image scale factor results in higher accuracy but lower speed.
             </p>
         </div>
     </div>
@@ -61,6 +81,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.17/socket.io.js"></script>
 	<!-- <script src="demo_util.js" type="module"></script> -->
     <script src="camera.js" type="module"></script>
+</div>
 </body>
+
 
 </html>
